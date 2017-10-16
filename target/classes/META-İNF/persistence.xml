@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+version="2.1">
+	<persistence-unit name="KirimPU"
+		transaction-type="RESOURCE_LOCAL">
+				
+		 <class>model.makale_gs</class> 
+		<properties>			
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://93.187.200.180:3306/kirimavrupa_db" />
+			<property name="javax.persistence.jdbc.user" value="kirimavrupa_yon" />
+			<property name="javax.persistence.jdbc.password" value="bFv7y*15" />
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+			<property name="eclipselink.logging.level" value="OFF" />				
+		</properties>
+	</persistence-unit>
+</persistence>
+
+<!--  
+ 
+ hatan bu xml içerisinde yada kullanmadığın annotationlar içinde geçerli 
+şmyle örneğin controller için sen @managedbean gibi bişey yazıyorsun bunun yanında 
+entityler yada dao içinde bişey olması lazım ama ben hiç persistance hiç kullanmadım. belki onlarda yoktur persistance dediğim şey aslında jpa 
+bu name kısmı ile entity manager utility oluşturamıyor initialize edemiyor sorun bu kusura bakma sende 
+iyi geceler diliyorum...  -->
